@@ -57,7 +57,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 934px;
-    background-color: #f2f2f2;
+    background-color: white;
 }
 .resume-button a{
   padding-right: 10px;
@@ -72,6 +72,36 @@ header {
     height: 50px; 
     width: auto; 
 }
+.container1{
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+     background-color: grey;
+}
 
+ .title{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    
+    text-align-last: center;
+    column-gap: 1 rem;
+ }
+  .title::before, .title::after{
+   content: " ";
+   height:1px;
+    width: 360px;
+    background-color:#000;
+    display: block; 
+  }
 
- 
+  .myself
+   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+   }
+
