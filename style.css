@@ -53,6 +53,7 @@ header {
 
 .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 934px;
@@ -66,3 +67,5 @@ header {
    
     padding: 5px;
   }
+
+ 
