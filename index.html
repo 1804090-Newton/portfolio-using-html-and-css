@@ -14,7 +14,7 @@
            
             <nav class="nav-links">
               <ul>
-                <li><a href="#about" class="nav-item">about</a></li>
+                <li><a href="#about" class="nav-item" onclick="toggleAbout()">about</a></li>
                 <li><a href="#experience" class="nav-item">experience</a></li>
                   <li class="navbar">
                   <a class="menu-toggle" onclick="toggleMenu()" >project</a>
@@ -40,11 +40,12 @@
                 <h1>Hi, I'm Newton</h1>
                 <h4>I design and build things</h4> <br><br><br><br><br><br><br>
                 
-               <a href="#about"> <i class="fa-solid fa-angles-down"></i></a>
+                <a href="#about" onclick="toggleAbout()"> <i class="fa-solid fa-angles-down"></i></a>
             </div>
         </div>
-       <div  class ="about_page ">
-        <div id="about" class="container1">
+        
+       <div  class ="about_page " id="about" >
+        <div  class="container1">
             <h1 class="title">About Me</h1>
         </div>
 

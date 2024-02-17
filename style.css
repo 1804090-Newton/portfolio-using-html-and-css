@@ -239,4 +239,8 @@ height: 300px;}
   .navbar .menu-items li a:hover {
     text-decoration: underline; 
   }
+
+  #about{
+   display: none;
+}
   
