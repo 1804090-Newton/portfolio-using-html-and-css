@@ -16,12 +16,16 @@
         });
     });
 
-   function toggleMenu() {
-  var menuItems = document.getElementById("menuItems");
-  menuItems.classList.toggle("active");
+
+
+    
+let navbar = document.querySelector(".navbar");
+
+let dropdownMenu = document.querySelector(".navbar .menu-items");
+function toggleMenu() {
+  dropdownMenu.classList.toggle("active");
 }
-
-
-
-      
+navbar.addEventListener("mouseleave", function() {
+  dropdownMenu.classList.remove("active");
+});
 
