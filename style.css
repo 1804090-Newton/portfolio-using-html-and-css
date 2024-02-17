@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 100px;
     position: sticky;
     top: 0; 
     background-color: #fff; 
@@ -203,4 +203,40 @@ height: 300px;}
 }
 
 
+  
+.navbar {
+    position: relative;
+    padding: 10px; 
+  }
+  .navbar:hover {
+    border: 1px solid #ddd;
+    background-color: #ddd;
+}
+  
+  .navbar .menu-items {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    display: none; 
+    background-color: #ddd; 
+    padding: 10px 0; 
+    border-radius: 4px; 
+  }
+  
+  .navbar .menu-items.active {
+    display: block; 
+  }
+  
+  .navbar .menu-items li {
+    padding: 10px; 
+  }
+  
+  .navbar .menu-items li a {
+    color: #000; 
+    text-decoration: none; 
+  }
+  
+  .navbar .menu-items li a:hover {
+    text-decoration: underline; 
+  }
   
