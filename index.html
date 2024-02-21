@@ -14,7 +14,7 @@
            
             <nav class="nav-links">
               <ul>
-                <li><a href="#about" class="nav-item" onclick="toggleAbout()">about</a></li>
+                <li><a  href="#about"  onclick="toggleAbout()" class="nav-item" >about</a></li>
                 <li><a href="#experience" class="nav-item">experience</a></li>
                   <li class="navbar">
                   <a class="menu-toggle" onclick="toggleMenu()" >project</a>
@@ -25,7 +25,7 @@
                   
                   </ul>
                 </li>  
-                <li><a href="#contact" class="nav-item" >contact</a></li>
+                <li><a href="#contact" class="nav-item"  onclick="createContactForm();" >contact</a></li>
               </ul>
             </nav>
         
@@ -63,29 +63,8 @@
         </div>
         </div>
 
-         
-      
-        <div id="contactForm" style="display: none;">
-            <h2 >Contact Me</h2>
-          <form id="contactForm">
-              <label for="firstName">First Name:</label><br>
-              <input type="text" id="firstName" name="firstName"><br>
-      
-              <label for="lastName">Last Name:</label><br>
-              <input type="text" id="lastName" name="lastName"><br>
-      
-              <label for="contactNumber">Contact Number:</label><br>
-              <input type="tel" id="contactNumber" name="contactNumber"><br>
-      
-              <label for="email">Email:</label><br>
-              <input type="email" id="email" name="email"><br>
-      
-              <label for="message">Message:</label><br>
-              <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-      
-              <button type="submit">Submit</button>
-          </form>
-      </div>
+           
+       
       
       
   <script src="script.js"></script>  
