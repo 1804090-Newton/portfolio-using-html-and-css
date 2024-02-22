@@ -47,8 +47,8 @@ header {
 }
 
 .nav-item:hover {
-    border: 1px solid #ddd;
     background-color: #ddd;
+    border-radius: 2px;
 }
 
 .main-content {
@@ -207,11 +207,12 @@ height: 300px;}
 .navbar {
     position: relative;
     padding: 10px; 
+    border-radius: 2px;
+
   }
   .navbar:hover {
-    border: 1px solid #ddd;
     background-color: #ddd;
-}
+   }
   
   .navbar .menu-items {
     position: absolute; 
@@ -234,12 +235,21 @@ height: 300px;}
   .navbar .menu-items li a {
     color: #000; 
     text-decoration: none; 
+
+    
   }
   
-  .navbar .menu-items li a:hover {
+  /* .navbar .menu-items li a:hover {
     text-decoration: underline; 
-  }
+  } */
 
   #about{
    display: none;
 }
+
+
+.hidden {
+    display: none;
+  }
+  
+  
