@@ -1,3 +1,6 @@
+
+document.getElementById('showUserButton').addEventListener('click', function() {
+
 function worker_function(e) {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
@@ -12,6 +15,8 @@ function worker_function(e) {
 const worker = new Worker(URL.createObjectURL(new Blob(["("+worker_function.toString()+")()"], {type: 'text/javascript'})));
 
 worker.addEventListener('message', function(e) {
+
+    
     const users = e.data;
     if (users.error) {
         console.error(users.error);
@@ -40,6 +45,11 @@ worker.addEventListener('message', function(e) {
     `;
 });
 
-document.getElementById('showUserButton').addEventListener('click', function() {
-    worker.postMessage('fetch');
 });
+
+
+
+
+
+
+
