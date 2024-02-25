@@ -1,27 +1,23 @@
-document.getElementById('showUserButton').addEventListener('click', function() {
-    const user = {
-      "id": 1,
-      "name": "Newton",
-      "username": "newton1804090",
-      "email": "u1804090@student.cuet.ac.bd",
-      "address": {
-        "street": "CUET, Sheikh russel hall, Chittagong",
-        "suite": "Apt. 556",
-        "city": "chittagong",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
-      "phone": "01770585590",
-      "website": "hildegard.org",
-      "company": {
-        "name": "spring rain",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
-    };
+function worker_function(e) {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => {
+        self.postMessage(data); 
+    })
+    .catch(error => {
+        self.postMessage({ error: error.message });
+    });
+}
+
+const worker = new Worker(URL.createObjectURL(new Blob(["("+worker_function.toString()+")()"], {type: 'text/javascript'})));
+
+worker.addEventListener('message', function(e) {
+    const users = e.data;
+    if (users.error) {
+        console.error(users.error);
+        return;
+    }
+    const user = users[0]; 
 
     const userInfoContainer = document.getElementById('userInfoContainer');
     userInfoContainer.innerHTML = `
@@ -42,4 +38,8 @@ document.getElementById('showUserButton').addEventListener('click', function() {
         <div>${user.phone}</div>
       </div>
     `;
-  });
+});
+
+document.getElementById('showUserButton').addEventListener('click', function() {
+    worker.postMessage('fetch');
+});
